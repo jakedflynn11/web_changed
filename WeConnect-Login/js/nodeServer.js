@@ -12,15 +12,23 @@ http.createServer(function(request, response) {
     var body = [];
 
 
-
+    var qs = require('querystring');
     request.on('error', function(err) {
         console.log("testing node err...");
         console.error(err);
     }).on('data', function(data) {
         console.log("testing node data...");
+        bodyarray.push(data);
+        body += data;
+
+        var post = qs.parse(body);
+
 
         //lets see what data we got...
-        console.log(data);
+        console.log(post);
+        console.log(post.email);
+
+        //getting info correctly at this point. ready for api call
 
     });
 
