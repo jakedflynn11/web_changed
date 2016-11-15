@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8" />
+     <meta content="width=device-width, initial-scale=1" name="viewport">
+  
+    <title>Welcome to WeConnect</title>
+    
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <link href="/app-content/app.css" rel="stylesheet" /> 
+    <meta charset="utf-8">
+ 
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="/home/pages/css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="/home/pages/css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="/home/pages/css/weconnect-payment-flow.webflow.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script type="text/javascript">
+    WebFont.load({
+      google: {
+        families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic"]
+      }
+    });
+  </script>
+  <script src="js/modernizr.js" type="text/javascript"></script>
+  <link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
+     
+</head>
+    
+<body ng-controller="mainController">
+    
+   <div class="nav_bar w-nav" data-animation="default" data-collapse="medium" data-contain="1" data-duration="400">
+    <div class="w-container">
+      <a class="w-nav-brand" href="#"><img class="image_logo" id="brand_logo" sizes="(max-width: 479px) 95vw, 200px" src="/home/pages/images/weconnect_logo_black-p-500x123.png" srcset="/home/pages/images/weconnect_logo_black-p-500x123.png 500w, images/weconnect_logo_black-p-800x197.png 800w, images/weconnect_logo_black-p-1080x266.png 1080w, images/weconnect_logo_black-p-1600x394.png 1600w, images/weconnect_logo_black-p-2000x492.png 2000w, images/weconnect_logo_black-p-2600x640.png 2600w, images/weconnect_logo_black-p-3200x787.png 3200w, images/weconnect_logo_black.png 5680w" width="200">
+      </a>
+      <nav class="w-nav-menu" role="navigation"><a class="home w-nav-link" href="#">Home</a><a class="subscription w-nav-link" href="#">Subscription</a>
+        <a class="w-nav-link" href="#"></a>
+      </nav>
+      <div class="w-nav-button">
+        <div class="w-icon-nav-menu"></div>
+      </div>
+    </div>
+  </div>
+    
+    <!-- angular injection starts here: loads up home.html -->
+    <div ng-view></div>
+    
+    <img sizes="(max-width: 2880px) 100vw, 2880px" src="/home/pages/images/footer-p-500x60.png" srcset="/home/pages/images/footer-p-500x60.png 500w, /home/pages/images/footer-p-800x95.png 800w, /home/pages/images/footer-p-1080x129.png 1080w, /home/pages/images/footer-p-1600x190.png 1600w, /home/pages/images/footer-p-2000x238.png 2000w, /home/pages/images/footer-p-2600x309.png 2600w, /home/pages/images/footer.png 2880w">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+  <script src="/home/pages/js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="js/angular-routes.js"></script>
+    
+    
+</body>
+</html>

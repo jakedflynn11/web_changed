@@ -1,0 +1,76 @@
+
+
+<div class="content">
+    <section class="module">
+    <div class="container medium" >
+            
+        <h1 class="module-title">Your Order Summary</h1>
+            <div>
+                <div class="checkout-table">
+                    <div class="header-row">
+                        <div class="header-product width-80">
+                            <span>Product</span>
+                        </div>
+                        <div class="header-price width-20">
+                            <span> Price</span>
+                        </div>
+                    </div>
+                    <hr class="rule">
+                    <div class="product-row">
+                        <div class="product-copy">  
+                            <p class="no-margin">
+                                <b>{{plan}}</b>
+                            </p>
+                            <p class="fs-17">Unlimited access to Weconnect for 12 months</p>
+                        </div>
+                    
+                        <div class="product-price">
+                            <p class="fs-17">
+                                <b>{{price}}</b>
+                                <b>USD</b>
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="rule">
+                    <div class="total-row">
+                        <div class="total-copy">
+                            <p class="no-margin shout">
+                                <b>Your Total</b>
+                            </p>
+                            <p class="fs-17">The total amount we will charge to your credit card.</p>
+                        </div>
+                        <div class="total-price">
+                            <b id="amount">{{total}}</b>
+                            
+                            <b>USD</b>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        
+           <div class="stripe-button-container">
+           
+    
+        <script
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="pk_test_GYcY6uvz3MM71pNUrKO4U1FG"
+            data-amount="1500"
+            data-name="WeConnect"
+            data-description="Widget"
+            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+            data-locale="auto"
+            data-label="Buy a Subscription"
+            data-zip-code="true"
+            data-billing-address="true"
+            >  
+
+        </script>
+              
+             
+        
+    </div>
+        
+        </div>
+    </section>
+</div>
+<script src="js/token-send.js"></script>

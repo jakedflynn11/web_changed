@@ -1,0 +1,58 @@
+
+
+<h1>YOUR SUBSCRIPTION</h1>
+
+   <div class="col-md-8">
+       <div class="well">
+           <dl class="dt1">
+               <dt>Subscription</dt>
+               <dd>Type: Free Trial</dd>
+               <dd>Payment Method: None</dd>
+           </dl>
+       </div>
+</div>
+
+<div class="col-md-4">
+  
+    
+    <a href="/home/index.html" class="btn btn-primary-account">Subscription</a>
+    <br>
+    <br>
+    <a href="#/settings" class="btn btn-primary-account">Settings</a>
+    <br>
+    <br>
+    <a href="#/login" class="btn btn-secondary-account">Logout</a>    
+</div>
+
+
+
+<script>
+ 
+ jQuery(function($){
+        $('.stripe-button').on('token', function(e, token){
+          var id = $('<span/>');
+          
+          
+          id.text(token.id);
+            
+            //dont need any of this. We want the token to stay hidden!
+          $('.stripe-button-container').replaceWith('<p>Your Stripe token is: <strong>' + id.html() + '</strong>.</p>');
+            
+            //logging to the console. 
+            console.log(token.id);
+            
+            //We want to take "(token.id)" and send it to Palalinq platform via ajax
+            //Pala platform will send us back a success/fail message
+            //then I will handle success or fail
+            
+            
+        });
+      });
+ 
+</script>
+<style>
+    
+  
+    
+    
+</style>
