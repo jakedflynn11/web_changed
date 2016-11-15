@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>Welcome to WeConnect</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link href="app-content/app.css" rel="stylesheet" />
     <link href="app-content/normalize.css" rel="stylesheet" />
     <link href="app-content/webflow.css" rel="stylesheet" />
@@ -223,6 +224,45 @@
         </div>
     </div>
 </footer>
+
+<div class="dev-test" style="height: 400px; width: 100%;">
+    <button id="api-call" onclick="testapi()">Test api call</button>
+</div>
+
+<script>
+    function testapi(){
+
+        var testData = {
+            "email" : "test@test.com",
+            "password" : "test-password",
+            "firstName" : "test-first-name",
+            "lastName" : "test-last-name",
+            "gender" : "male",
+            "birthday" : "1989-08-03",
+            "soberday" : "2015-08-03",
+            "phone" : "5098675309",
+            "userType" : "support"
+        };
+
+
+        $.ajax({
+            url: "http://localhost:7000",
+            method: "POST",
+            dataType: "text",
+            data: testData,
+            jsonCallback: 'callback',
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (xhr, status, error) {
+                console.log(xhr);
+                console.log(status);
+                console.log(error);
+
+            }
+        });
+    }
+</script>
   
     
     

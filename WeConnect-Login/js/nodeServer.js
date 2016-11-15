@@ -1,5 +1,5 @@
 var http = require('http');
-
+console.log("server started");
 
 http.createServer(function(request, response) {
 
@@ -14,15 +14,15 @@ http.createServer(function(request, response) {
 
 
     request.on('error', function(err) {
-        console.log("testing node...");
+        console.log("testing node err...");
         console.error(err);
     }).on('data', function(data) {
-        console.log("testing node...");
+        console.log("testing node data...");
 
         //lets see what data we got...
-        conosle.log(data);
+        console.log(data);
 
     });
 
 
-}).listen(5000);
+}).listen(7000);

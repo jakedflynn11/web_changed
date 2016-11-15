@@ -32,18 +32,6 @@
  
         function Create(user) {
 
-            //this data set is being used to test the api call to the staging api
-            var testData = {
-                "email" : "test@test.com",
-                "password" : "test-password",
-                "firstName" : "test-first-name",
-                "lastName" : "test-last-name",
-                "gender" : "male",
-                "birthday" : "1989-08-03",
-                "soberday" : "2015-08-03",
-                "phone" : "5098675309",
-                "userType" : "support"
-            };
 
             return $http.post('https://palalinq-staging.herokuapp.com/api/People', testData).then(handleSuccess, handleError('Error creating user'));
         }
